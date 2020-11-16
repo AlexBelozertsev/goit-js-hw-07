@@ -3,10 +3,10 @@ const inputLength = input.getAttribute('data-length');
 // 'change' || 'blur'
 input.addEventListener('change', event => {
     if (event.target.value.length === 0) {
-        input.classList.remove('invalid'), input.classList.remove('valid')
+        input.classList.remove('invalid') || input.classList.remove('valid')
     } else {
         event.target.value.length === Number(inputLength)
-        ? (input.classList.add('valid'), input.classList.remove('invalid'))
-        : (input.classList.add('invalid'), input.classList.remove('valid'));
+        ? (input.classList.add('valid') || input.classList.remove('invalid'))
+        : (input.classList.add('invalid') || input.classList.remove('valid'));
     }
 })
