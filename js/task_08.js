@@ -8,20 +8,19 @@ renderBtn.addEventListener('click', createBoxes);
 
 function createDivs(amount) {
     let size = 30;
-    for (let i = 1; i < amount; i++) {
+    for (let i = 0; i < amount; i++) {
         size += 10;
         const createDiv = document.createElement('div');
         createDiv.style.width = `${size}px`;
         createDiv.style.height = `${size}px`;
-        createDiv.style.backgroundColor='#' + ( Math.random() * 0xFFFFF0 << 0 ).toString(16);
+        createDiv.style.backgroundColor=`#${Math.random().toString(16).substr(-6)}`;
         boxes.appendChild(createDiv);
     }
 };
 function createBoxes() {
     const value = Number(input.value);
     createDivs(value);
-}
-
+};
 function destroyBoxes() {
     boxes.innerHTML = '';
     input.value = '';
