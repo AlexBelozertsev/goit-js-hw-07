@@ -9,12 +9,11 @@ const ingredients = [
   'Приправы',
 ];
 
-const createList = ingredient => {
-    const item = document.createElement('li');
-    item.textContent = ingredient;
-    ingredientsRef.append(item);
-    return ingredientsRef;
-}
-const ingredientRef = ingredients.map(ingredient => createList(ingredient))
+const items = [];
+ingredients.map(ingredient => {
+  const item = document.createElement('li');
+  item.textContent = ingredient;
+  items.push(item)
+})
 
-// console.log(createList(...ingredients));
+ingredientsRef.append(...items)
