@@ -2,7 +2,7 @@ const input = document.querySelector('#controls > input');
 const renderBtn = document.querySelector('button[data-action="render"]');
 const destroyBtn = document.querySelector('button[data-action="destroy"]');
 const boxes = document.querySelector('#boxes');
-const div = [];
+let div = [];
 
 destroyBtn.addEventListener('click', destroyBoxes);
 renderBtn.addEventListener('click', createBoxes);
@@ -25,6 +25,7 @@ function createBoxes() {
     createDivs(value);
 };
 function destroyBoxes() {
+    div = [];
     boxes.innerHTML = '';
     input.value = '';
 };
