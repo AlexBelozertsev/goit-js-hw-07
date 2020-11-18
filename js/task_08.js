@@ -8,6 +8,8 @@ destroyBtn.addEventListener('click', destroyBoxes);
 renderBtn.addEventListener('click', createBoxes);
 
 function createDivs(amount) {
+    accumDivs = [];
+    boxes.innerHTML = '';
     let size = 30;
     for (let i = 0; i < amount; i++) {
         size += 10;

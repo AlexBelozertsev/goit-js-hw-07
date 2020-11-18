@@ -5,14 +5,19 @@ input.addEventListener('change', event => {
     const text = event.target.value;
 
     if (text.length === 0 || text.trim() === '') {
-        input.classList.remove('invalid') || input.classList.remove('valid')
+        input.classList.remove('invalid');
+        input.classList.remove('valid');
     }
-    else addClass(event)
+    else changeClass(event)
 });
 
-function addClass(event) {
+function changeClass(event) {
     if (event.target.value.length === Number(inputLength)) {
-        input.classList.add('valid') || input.classList.remove('invalid')
+        input.classList.add('valid');
+        input.classList.remove('invalid');
     }
-    else input.classList.add('invalid') || input.classList.remove('valid')
+    else {
+        input.classList.add('invalid');
+        input.classList.remove('valid')
+    }
 }
