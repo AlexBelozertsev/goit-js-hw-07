@@ -19,6 +19,6 @@ const images = [
 const gallery = document.querySelector('#gallery');
 gallery.classList.add('flex')
 
-const createGallery = ({ url, alt }) => `<li><img src = ${url} alt=${alt} width = 320 height = 200><li>`;
+const createGallery = ({ url, alt }) => `<li><img src=${url} alt=${alt} width = 320 height = 200><li>`;
 const galleryList = images.map(createGallery).join('');
 gallery.insertAdjacentHTML('afterbegin', galleryList);
