@@ -16,7 +16,7 @@ const images = [
   },
 ];
 
-let gallery = document.querySelector('#gallery');
+const gallery = document.querySelector('#gallery');
 gallery.classList.add('flex')
 
 const createGallery = ({ url, alt }) => `<li><img src = ${url} alt=${alt} width = 320 height = 200><li>`;

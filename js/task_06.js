@@ -6,7 +6,7 @@ input.addEventListener('change', event => {
         input.classList.remove('invalid') || input.classList.remove('valid')
     } else {
         event.target.value.length === Number(inputLength)
-        ? (input.classList.add('valid') || input.classList.remove('invalid'))
-        : (input.classList.add('invalid') || input.classList.remove('valid'));
+            ? (input.classList.add('valid') || input.classList.remove('invalid'))
+            : (input.classList.add('invalid') || input.classList.remove('valid'));
     }
-})
+});
